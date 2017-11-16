@@ -9,58 +9,91 @@
   <script type="text/javascript">
   var canvas = document.getElementById('canvas');
   var m =  canvas.getContext("2d");
+  //Tête
+  m.beginPath();
   m.fillStyle = "#976F0F";
   m.arc(200,55,50,0,Math.PI*2,true);
   m.fill();
+  //Bras
+  m.beginPath();
   m.strokeStyle = "#976F0F";
-  m.beginPath();
-  m.moveTo(50,100)
-  m.lineTo(350,100);
-  m.closePath();
   //On choisis de d'arrondir les bords
-  m.lineJoin = "round";
+  m.lineCap = "round";
   m.lineWidth = "25";
+  m.moveTo(50,100);
+  m.lineTo(350,100);
   m.stroke();
+  //Partie centrale
   m.beginPath();
+  m.fillStyle = "#976F0F";
   m.moveTo(150,100);
   m.lineTo(250,100);
   m.lineTo(250,250);
   m.lineTo(150,250);
+  m.fill();
+  //Jambe gauche
+  m.beginPath();
+  m.strokeStyle = "#976F0F";
+  m.lineCap = "round";
+  m.lineWidth = "25";
+  m.moveTo(162,250);
+  m.lineTo(162,350);
+  m.stroke();
+  //Jambe droite
+  m.beginPath();
+  m.strokeStyle = "#976F0F";
+  m.lineCap = "round";
+  m.lineWidth = "25";
+  m.moveTo(238,250);
+  m.lineTo(238,350);
+  m.stroke();
+  //Yeux
+  m.beginPath();
+  m.fillStyle = "#FFFFFF";
+  m.arc(180,45,7,0,Math.PI*2,true);
+  m.fill();
+
+  m.beginPath();
+  m.fillStyle = "#FFFFFF";
+  m.arc(220,45,7,0,Math.PI*2,true);
+  m.fill();
+  //Rond violet
+  m.beginPath();
+  m.fillStyle = "#7A2976";
+  m.arc(200,130,7,0,Math.PI*2,true);
+  m.fill();
+
+  m.beginPath();
+  m.fillStyle = "#7A2976";
+  m.arc(200,165,7,0,Math.PI*2,true);
+  m.fill();
+  //Sourcils
+  m.beginPath();
+  m.lineWidth = "2";
+  m.strokeStyle = "#FFFFFF";
+  m.moveTo(173,35);
+  m.quadraticCurveTo(180,25,187,35);
+  m.stroke();
+
+  m.beginPath();
+  m.strokeStyle = "#FFFFFF";
+  m.moveTo(213,35);
+  m.quadraticCurveTo(220,25,227,35);
+  m.stroke();
+  //Bouche
+  m.beginPath();
+  m.fillStyle = "#DA2705";
+  m.moveTo(173,65);
+  m.quadraticCurveTo(200,75,227,65);
   m.closePath();
   m.fill();
+
   m.beginPath();
- m.moveTo(162,250);
- m.lineTo(162,350);
-m.closePath();
- m.lineJoin = "round";
- m.lineWidth = "25";
-m.stroke();
-   m.beginPath();
- m.moveTo(238,250);
- m.lineTo(238,350);
-m.closePath();
- m.lineJoin = "round";
- m.lineWidth = "25";
-m.stroke();
-m.beginPath();
-m.fillStyle = "#FFFFFF";
- m.arc(180,45,7,0,Math.PI*2,true);
- m.fill();
-m.closePath();
- m.beginPath()
- m.arc(220,45,7,0,Math.PI*2,true);
- m.fill();
-m.closePath();
-m.beginPath()
-m.fillStyle = "#7A2976";
- m.arc(200,130,7,0,Math.PI*2,true);
- m.fill();
-m.closePath();
- m.beginPath()
-m.fillStyle = "#7A2976";
- m.arc(200,165,7,0,Math.PI*2,true);
-m.closePath();
-m.fill();
- </script>
+  m.fillStyle = "#DA2705";
+  m.moveTo(173,65);
+  m.quadraticCurveTo(200,95,227,65);
+  m.closePath();
+  m.fill();
+  </script>
 </body>
 </html>
